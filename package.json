@@ -1,0 +1,51 @@
+{
+  "name": "1ITF_Sass_BS5_project",
+  "version": "1.0.0",
+  "description": "1ITF Sass - Bootstrap 5 project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pverhaert/1ITF_Sass_BS5_project.git"
+  },
+  "keywords": [
+    "Thomas More Kempen",
+    "Sass",
+    "Bootstrap 5",
+    "1ITF"
+  ],
+  "author": "Patrick Verhaert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pverhaert/1ITF_Sass_BS5_project/issues"
+  },
+  "homepage": "https://github.com/pverhaert/1ITF_Sass_BS5_project#readme",
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp build"
+  },
+  "type": "module",
+  "devDependencies": {
+    "bootstrap": "^5.2.3",
+    "browser-sync": "^2.27.11",
+    "del": "^7.0.0",
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-css-mqpacker": "^1.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-minifier": "^3.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "prettier": "^2.8.4"
+  }
+}

@@ -1,0 +1,22 @@
+// override/add the default $utilities map
+// Info: https://getbootstrap.com/docs/5.2/utilities/api/#add-utilities
+
+// add 'left', 'right' and 'justify' to the $text-align map
+$utilities: map-merge(
+  $utilities,
+  (
+    'text-align': (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+        left: left,
+        right: right,
+        justify: justify,
+      ),
+    ),
+  )
+);
