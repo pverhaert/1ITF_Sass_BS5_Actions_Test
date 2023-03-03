@@ -13,7 +13,6 @@
 - **Netlify Hosting**: [https://subdomain.netlify.app](https://subdomain.netlify.app)
 
 ## Setup Netlify Hosting
-- [ ] Go to [Netlify](https://www.netlify.com/) and login with your GitHub account
 - [ ] Create a new folder on your computer and name it e.g. `netlify`
 - [ ] Create a simple `index.html` file in the `netlify` folder
     ```html
@@ -30,7 +29,10 @@
     </body>
     </html>
     ```
-- Your new website should be visible at [https://subdomain.netlify.app](https://subdomain.netlify.app) where `subdomain` is a random name Netlify has generated for you
+- [ ] Go to [Netlify](https://www.netlify.com/) and login with your GitHub account
+- [ ] Go to the **Sites** tab and click on the **Add new site** dropdown and select **Deploy manually**
+- [ ] Drag and drop the **netlify folder** (not the `index.html` page) into the Netlify window
+    Your new website should be visible at [https://subdomain.netlify.app](https://subdomain.netlify.app) where `subdomain` is a random name Netlify has generated for you
 - [ ] Open your site settings and rename the subdomain to something more meaningful
   - Click on the **Domain settings** button
   - Click on the **Options** dropdown and select **Edit site name**
