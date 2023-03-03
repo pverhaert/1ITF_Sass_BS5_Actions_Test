@@ -1,0 +1,38 @@
+name: CI/CD -> Build and deploy on Netlify
+
+# triggers the workflow when a push is made to the main branch
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+    # The job (aka runner) "build_and_deploy" will run on an ubuntu-latest machine
+    build_and_deploy:
+        name: Build and deploy
+        runs-on: ubuntu-latest
+        # The job contains four steps that will be executed sequentially
+        steps:
+            # Step 1: Checkout the main branch
+            -   name: Checkout main branche
+                uses: actions/checkout@v3
+
+            # Step 2: Set up Node.js 18 in the Ubuntu machine
+            -   name: Set up Node.js
+                uses: actions/setup-node@v3
+                with:
+                    node-version: 18
+            -   run: npm ci
+
+            # Step 3: Optimize images, minify CSS, JS, HTML, etc. with the Gulp build task
+            -   name: Run gulp build
+                run: gulp build
+
+            # Step 4: Deploy the site to Netlify
+            -   name: Deploy Site to Netlify
+                uses: South-Paw/action-netlify-deploy@v1.2
+                with:
+                    github-token: ${{ secrets.GITHUB_TOKEN }}
+                    netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }}
+                    netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                    build-dir: './dist'
+                    comment-on-commit: true
